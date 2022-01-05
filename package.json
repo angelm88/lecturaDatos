@@ -1,0 +1,30 @@
+{
+  "name": "patient_monitoring",
+  "version": "1.0.0",
+  "description": "Patient monitoring project, server connected to arduino and domain",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/server/index.js"
+  },
+  "author": "Maac",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.11"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.5",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-flash": "0.0.2",
+    "express-session": "^1.17.2",
+    "jquery": "^3.6.0",
+    "mdb-ui-kit": "^3.10.1",
+    "mysql2": "^2.2.5",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "socket.io": "^4.4.0"
+  }
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- BOOTSTRAP -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<!-- CSS -->
+	<link rel="stylesheet" href="styles/history.css">
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="/scripts/history.js"></script>
+    <title> History </title>
+</head>
+
+<body class="text-center gradient-custom">
+
+    <div class="content">
+        <div class="row">
+
+            <div class="col-xl-12 col-12 header-profile">
+                <a href="javascript:history.go(-1)" style="margin-right: 10px;">Go Back</a>
+                <a href="/logout"> Log Out </a>
+            </div>
+            <div class="col-xl-12 col-12 header-profile">
+                <h2 class="text-center mb-3"> Patient Monitoring 
+                    <img class="mb-0 mt-0" src="/images/mdk_logo.png" alt="" width="200" height="100">
+                </h2>
+            </div>
+            <div class="col-xl-3 col-12">
+                <div class="box">
+                        <div class="box-header">
+                            <h6 class="box-title font-weight-600 text-uppercase">Search</h6>
+                        </div>
+                        <div class="box-body body-history">
+                                <!-- patient Id-->
+                                <div class="form-floating mb-3">
+                                    <input type="text" id="patient_id" class="form-control" placeholder="Patient Id"/>
+                                    <label class="form-label" for="patient_id"> Patient Id </label>
+                                </div>
+                                
+                                <!-- FIRST date -->
+                                <div class="form-floating mb-3">
+                                    <input type="datetime-local" id="start-date" class="form-control" placeholder="Start Date"/>
+                                    <label class="form-label" for="start-date">Start Date</label>
+                                </div>
+            
+                                <!-- end date -->
+                                <div class="form-floating mb-3">
+                                    <select id="period" class="form-control" required>
+                                        <option value="60">1 hr.</option>
+                                        <option value="120">2 hrs.</option>
+                                        <option value="240">4 hrs.</option>
+                                        <option value="480">8 hrs.</option>
+                                        <option value="0">Custom</option>
+                                    </select>
+                                    <label class="form-label" for="period">Period</label>
+                                </div>
+
+                                <div class="form-floating mb-3 not-display" id="containerEndDate">
+                                    <input type="datetime-local" id="end-date" class="form-control" placeholder="End Date" />
+                                    <label class="form-label" for="end-date">End Date</label>
+                                </div>
+                                    
+                                <div class="d-flex justify-content-center">
+                                    <button id="searhHistory" class="w-100 btn btn-lg btn-primary btn-block btn-lg">Search</button>
+                                </div>
+                        </div>
+                </div>
+            </div>
+            <div class="col-xl-9 col-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h6 class="box-title font-weight-600 text-uppercase">History</h6>
+                    </div>
+                    <div class="box-body" style="position: relative;">
+                        <div class="table-responsive">
+                            <table class="table" id="tableHistoryData">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Sex</th>
+                                        <th>Age</th>
+                                        <th>SpO2</th>
+                                        <th>HR</th>
+                                        <th>Date</th>
+                                    </tr><!--end tr-->
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
